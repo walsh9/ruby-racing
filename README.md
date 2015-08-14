@@ -10,7 +10,7 @@ Watch animals race across your terminal to the finish line.
 
 For best results use a terminal that supports emoji.
 
-The racers stats are randomized each time.
+The racers' stats are randomized each time.
 
 Who will win?
 
