@@ -26,6 +26,10 @@ OR if you're using SSH...
 Just run this command in your terminal to watch a race.
 
     ruby racing.rb
+    
+## Requirements
+
+Ruby 2.1  or greater
 
 ## License
 © Matt Walsh 2015 under the MIT License
