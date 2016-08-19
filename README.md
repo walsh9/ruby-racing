@@ -17,7 +17,7 @@ Who will win?
 ## Getting Started
 Clone the repo to your local machine.
 
-    git clone https://github.com/walsh9/contribflow.git
+    git clone https://github.com/walsh9/ruby-racing.git
 
 OR if you're using SSH...
 
