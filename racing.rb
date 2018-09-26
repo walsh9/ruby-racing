@@ -43,12 +43,16 @@ def race(racers, term_width=80, finish_char="|")
   scale = 200
   finish_line_chars = term_width - 4
   finish_line = finish_line_chars * scale
-  tick = 0
+  countdown = if (not ARGV[0].nil?) and ARGV[0].respond_to?(:to_i)
+    ARGV[0].to_i
+  else 
+    10
+  end
   until racers.any?{|_,racer| racer.distance_traveled >= finish_line} do
     #clear terminal
     puts "\e[H\e[2J"
     racers.each do |name, racer|
-      if tick >= 10
+      if countdown === 0
         racer.move(1)
       end
       distance_chars = (racer.distance_traveled.to_i / scale)
@@ -60,10 +64,10 @@ def race(racers, term_width=80, finish_char="|")
       end
       puts
     end
-    if tick < 10
-      tick += 1
+    if countdown > 0
       print "Place your bets..."
-      puts 11 - tick
+      puts countdown
+      countdown -= 1
       sleep 1
     end
     sleep 0.1
